@@ -125,7 +125,7 @@ video {
 .page-content .buttons a:nth-child(2):hover {
   transition-delay: .3s;
   box-shadow: 0 0 40px rgb(238, 5, 5);
-  background-color: #ff310c;
+  background-color: ;
 }
 
 .page-content .social-accounts {
