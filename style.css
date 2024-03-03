@@ -7,13 +7,22 @@
   color: #fff;
 }
 
+@media only screen and (max-width: 430px) {
+  .video {
+    visibility: visible;
+    width: 75rem;
+    height: 100rem;
+  }
+}
+
 video {
   position: absolute;
   left: 0;
   top: 0;
-  height: 150vh;
+  height: 100rem;
+  height: auto;
   
-  width: 100%;
+  width: 100rem;
   object-fit: cover;
   pointer-events: none;
   z-index: -1;
