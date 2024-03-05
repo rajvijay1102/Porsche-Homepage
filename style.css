@@ -15,12 +15,22 @@
   }
 }
 
+h1 {
+  color: white;
+  transition: all 2s;
+}
+
+h1:hover {
+ box-shadow: 0 0 40px white;
+}
+
 video {
   position: absolute;
   left: 0;
   top: 0;
   height: 100rem;
   height: auto;
+
   
   width: 100rem;
   object-fit: cover;
@@ -134,8 +144,8 @@ video {
 
 .page-content .buttons a:nth-child(2):hover {
   transition-delay: .3s;
-  box-shadow: 0 0 40px rgb(238, 5, 5);
-  background-color: ;
+  box-shadow: 0 0 40px ;
+  
 }
 
 .page-content .social-accounts {
