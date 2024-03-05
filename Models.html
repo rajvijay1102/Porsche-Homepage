@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Models</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <title>Models</title>
     <br>
     <style>
        .card-image {
   background-size: cover;
   top: 100%;
   background-position: center center;
-  height: 500px; /* adjust the height as needed */
+  height: 800px; /* adjust the height as needed */
   border-radius: 5rem;
   width: 35rem;
   margin-right: 5rem;
   margin-left: 6rem;
-  transition: all 2s ease-in-out 2s;
+  transition: all 2s ease-in-out 4s;
+}
+
+.card-title {
+  justify-content: center;
+  margin-top: ;
 }
 
 .card-image:hover{
     margin-left: 70px;
   position: relative;
-  background-size: 500px 500px;
+  background-size: 550px 800px;
   color: #000;
   font-weight: 600;
   animation: backgroundIMG 2s ease-in-out 2s;
-  animation-fill-mode: forwards;
+  
 }
 
 .card-content {
@@ -40,6 +51,7 @@
   font-weight: bolder;
   font-size: x-large;
 }
+
         .button {
             background-color: black;
             border: none;
@@ -55,39 +67,86 @@
         }
         h1 {
             text-align: center;
-            color: white;
+            color: black;
+            font-family: "Orbitron", sans-serif;
         }
 
         body {
-        background: black;
+        background: white;
 
         }
 
     </style>
 </head>
 <body>
-    <h1>Car Models</h1>
+    <h1>Models</h1>
     <table>
       <td>
 
         <div class="card card-image" style="background-image: url('718.avif');">
             <div class="card-content">
-              <span class="card-title"></span>
-              <a href="https://com/en-WW/model-start/911" class="button">Build your 718</a>
-<a href="https://com/en-WW/model-start/911" class="button">All 718 models</a>
+              <span class="card-title" style="font-family: Orbitron, sans-serif; font-weight: 400px; font-size: xx-large;">718</span>
+              <div class="card-button"><a href="https://com/en-WW/model-start/911" class="button">Build your 718</a>
+<a href="https://com/en-WW/model-start/911" class="button">All 718 models</a></div>
             </div>
           </div>
   </td>
 <td>
   <div class="card card-image" style="background-image: url('911.avif');">
     <div class="card-content">
-      <span class="card-title"></span>
-      <a href="https://com/en-WW/model-start/911" class="button">Build your 911</a>
-            <a href="https://com/en-WW/model-start/911" class="button">All 911 models</a>
+      <span class="card-title" style="font-family: Orbitron, sans-serif; font-weight: 400px; font-size: xx-large;" >918</span>
+      <div class="card-button"><a href="https://com/en-WW/model-start/911" class="button">Build your 911</a>
+            <a href="https://com/en-WW/model-start/911" class="button">All 911 models</a></div>
     </div>
   </div>
 </td>
       </table>
+<br>
+
+      <table>
+        <td>
+  
+          <div class="card card-image" style="background-image: url('Taycan.avif'); margin-top: 80px;">
+              <div class="card-content">
+                <span class="card-title" style="font-family: Orbitron, sans-serif; font-weight: 400px; font-size: xx-large;">Taycan</span>
+                <div class="card-button"><a href="https://com/en-WW/model-start/Taycan" class="button">Build your Taycan</a>
+  <a href="https://com/en-WW/model-start/Taycan" class="button">All Taycan models</a></div>
+              </div>
+            </div>
+    </td>
+  <td>
+    <div class="card card-image" style="background-image: url('Panamera.avif'); margin-top: 80px;">
+      <div class="card-content">
+        <span class="card-title" style="font-family: Orbitron, sans-serif; font-weight: 400px; font-size: xx-large;">Panamera</span>
+        <div class="card-button"><a href="https://com/en-WW/model-start/Panamera" class="button">Build your Panamera</a>
+              <a href="https://com/en-WW/model-start/Panamera" class="button">All Panamera models</a></div>
+      </div>
     </div>
+  </td>
+        </table>
+<br>
+<table>
+  <td>
+
+    <div class="card card-image" style="background-image: url('Macan.avif'); margin-top: 80px;">
+        <div class="card-content">
+          <span class="card-title" style="font-family: Orbitron, sans-serif;font-weight: 400px; font-size: xx-large;">Macan</span>
+          <div class="card-button"><a href="https://com/en-WW/model-start/Macan" class="button">Build your Macan</a>
+<a href="https://com/en-WW/model-start/Macan" class="button">All Macan models</a></div>
+        </div>
+      </div>
+</td>
+<td>
+<div class="card card-image" style="background-image: url('Cayenne.avif'); margin-top: 80px;">
+<div class="card-content">
+  <span class="card-title" style="font-family: Orbitron, sans-serif; font-weight: 400px; font-size: xx-large;">Cayenne</span>
+  <div class="card-button"><a href="https://com/en-WW/model-start/Cayenne" class="button">Build your Cayenne</a>
+        <a href="https://com/en-WW/model-start/Cayenne" class="button">All Cayenne models</a></div>
+</div>
+</div>
+</td>
+  </table>
+
+
 </body>
 </html>
