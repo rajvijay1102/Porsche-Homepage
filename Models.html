@@ -4,72 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-
-<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
     <title>Models</title>
-    <br>
     <style>
-       .card-image {
-  background-size: cover;
-  top: 100%;
-  background-position: center center;
-  height: 800px; /* adjust the height as needed */
-  border-radius: 1rem;
-  width: 35rem;
-  margin-right: 5rem;
-  margin-left: 6rem;
-  transition: all ;
+        .card-container {
+            width: 35rem;
+            height: 20rem;
+            perspective: 1000px;
+            margin-left: 7rem;
+            display: inline-block;
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+           
+        }
 
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+            margin-top: 4rem;
+        }
+
+        .card.flipped {
+            transform: rotateX(180deg);
+        }
+
+        .card .front, .card .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .card .front {
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        .card .back {
+    background: linear-gradient(to right, #12C2E9, #F64F59); 
+    color: white;
+    transform: rotateX(180deg);
+    border-radius: 5px;
+    text-align: left;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden; 
 }
 
-.card-title {
-  justify-content: center;
-  
+.card .back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); 
+    z-index: -1;
 }
 
-.card-image:hover{
-    margin-left: 70px;
-  position: relative;
-  background-size: 550px 800px;
-  color: #000;
-  font-weight: 600;
-  box-shadow: 0 0 40px black;
-  
+.card .back .decorative-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1; 
 }
 
-.card-content {
-  position: relative;
-  top: 85%;
-  transform: translateY(-50%);
-  align-items: center;
-  text-align: center;
-  color: white;
-  font-family: 'Times New Roman', Times, serif;
-  font-style: oblique;
-  font-weight: bolder;
-  font-size: x-large;
+.card .back .decorative-lines::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: white;
 }
 
-        .button {
-            background-color: black;
-            border: none;
+.card .back .content {
+    position: relative; 
+    z-index: 2;
+}
+
+.card .back h2 {
+    font-size: 2rem; 
+    margin-bottom: 1rem;
+}
+
+.card .back p {
+    font-size: 1.2rem; 
+    margin-bottom: 1.5rem;
+}
+
+.card .back ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.card .back ul li {
+    margin-bottom: 0.5rem;
+}
+
+.card .back .cta-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+
+
+        .cta-container {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .cta {
+            background-color:black; 
             color: white;
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 4px 2px;
             cursor: pointer;
-            transition: all;
-            
+            border-radius: 8px;
+            border: 2px solid transparent;
+            margin-bottom: 5rem;
+            font-weight: bolder;
+            transition:all 2s;
         }
 
-        .button:hover{
-          box-shadow: 0 0 40px white;
+        .cta:hover {
+            box-shadow: 0 0 40px white;
         }
 
         h1 {
@@ -77,83 +159,165 @@
             color: black;
             font-family: "Orbitron", sans-serif;
         }
-
-        body {
-        background: white;
-
+        h2 {
+            font-family: "Damion", cursive;
+                font-weight: bolder;
+                font-style: normal;
+                font-size: xx-large;
         }
-
+        body {
+            background: white;
+        }
     </style>
 </head>
 <body>
     <h1>Models</h1>
-    <table>
-      <td>
-
-        <div class="card card-image" style="background-image: url('718.png');">
-            <div class="card-content">
-              <span class="card-title" style="font-family: Orbitron, sans-serif; font-weight: 400px; font-size: xx-large;"></span>
-              <div class="card-button"><a href="https://com/en-WW/model-start/911" class="button">Build your 718</a>
-<a href="https://com/en-WW/model-start/911" class="button">All 718 models</a></div>
+    <div class="card-container">
+        <div class="card">
+            <div class="front" style="background-image: url('718.webp');"></div>
+            <div class="back">
+                <h2>718</h2>
+                <p style="font-family: Damion, cursive;  
+                font-style: normal;
+                font-size:larger;">Engine Type : 
+                    MA2.20 Turbocharged Flat-4</p>
+                <ul>
+                    <li><strong>Acceleration 0 - 100 km/h:</strong> 5,1 s</li>
+                    <li><strong>Top speed:</strong> 275 Km/hr</li>
+                    <li><strong>Sound level of stationary vehicle (rpm):</strong> 3.750 1/min</li>
+                </ul>
+                <ul>
+                    <li><strong>Standard Features:</strong> Autopilot, Navigation,  Seats</li>
+                    <li><strong>Optional Features:</strong> Full Self-Driving Capability, Premium Sound System</li>
+                </ul>
+                <button class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</button>
             </div>
-          </div>
-  </td>
-<td>
-  <div class="card card-image" style="background-image: url('911\ f.png');">
-    <div class="card-content">
-      <span class="card-title" style="font-family: Orbitron, sans-serif; font-weight: 400px; font-size: xx-large;" ></span>
-      <div class="card-button"><a href="https://com/en-WW/model-start/911" class="button">Build your 911</a>
-            <a href="https://com/en-WW/model-start/911" class="button">All 911 models</a></div>
-    </div>
-  </div>
-</td>
-      </table>
-<br>
-
-      <table>
-        <td>
-  
-          <div class="card card-image" style="background-image: url('taycan.png'); margin-top: 80px;">
-              <div class="card-content">
-                <span class="card-title" style="font-family: Orbitron, sans-serif; font-weight: 400px; font-size: xx-large;"></span>
-                <div class="card-button"><a href="https://com/en-WW/model-start/Taycan" class="button">Build your Taycan</a>
-  <a href="https://com/en-WW/model-start/Taycan" class="button">All Taycan models</a></div>
-              </div>
-            </div>
-    </td>
-  <td>
-    <div class="card card-image" style="background-image: url('panamera\ f.png'); margin-top: 80px;">
-      <div class="card-content">
-        <span class="card-title" style="font-family: Orbitron, sans-serif; font-weight: 400px; font-size: xx-large;"></span>
-        <div class="card-button"><a href="https://com/en-WW/model-start/Panamera" class="button">Build your Panamera</a>
-              <a href="https://com/en-WW/model-start/Panamera" class="button">All Panamera models</a></div>
-      </div>
-    </div>
-  </td>
-        </table>
-<br>
-<table>
-  <td>
-
-    <div class="card card-image" style="background-image: url('macan\ f.png'); margin-top: 80px;">
-        <div class="card-content">
-          <span class="card-title" style="font-family: Orbitron, sans-serif;font-weight: 400px; font-size: xx-large;"></span>
-          <div class="card-button"><a href="https://com/en-WW/model-start/Macan" class="button">Build your Macan</a>
-<a href="https://com/en-WW/model-start/Macan" class="button">All Macan models</a></div>
         </div>
+    </div>
+
+    
+    <div class="card-container">
+        <div class="card">
+            <div class="front" style="background-image: url('911.jpg');"></div>
+            <div class="back">
+                <h2>911</h2>
+                <p style="font-family: Damion, cursive;  
+                font-style: normal;
+                font-size:larger;">Engine Type : 
+                    Rear-mounted Flat-6</p>
+                <ul>
+                    <li><strong>Acceleration 0 - 100 km/h:</strong> 3.5s</li>
+                    <li><strong>Top speed:</strong> 320 km/h</li>
+                    <li><strong>Sound level of stationary vehicle (rpm):</strong> 600-800 rpm </li>
+                </ul>
+                <ul>
+                    <li><strong>Standard Features:</strong> Autopilot, Navigation, Heated Seats</li>
+                    <li><strong>Optional Features:</strong> Full Self-Driving Capability, Premium Sound System</li>
+                </ul>
+                <button class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="front" style="background-image: url('panameraf.jpg');"></div>
+            <div class="back">
+                <h2>PANAMERA</h2>
+                <p style="font-family: Damion, cursive;  
+                font-style: normal;
+                font-size:larger;">Engine Type : 
+                    V8 Engine</p>
+                <ul>
+                    <li><strong>Acceleration 0 - 100 km/h:</strong> 3.6s</li>
+                    <li><strong>Top speed:</strong> 306 km/h</li>
+                    <li><strong>Sound level of stationary vehicle (rpm):</strong> 600-800 rpm </li>
+                </ul>
+                <ul>
+                    <li><strong>Standard Features:</strong> Autopilot, Navigation, Heated Seats</li>
+                    <li><strong>Optional Features:</strong> Full Self-Driving Capability, Premium Sound System</li>
+                </ul>
+                <button class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card-container">
+      <div class="card">
+          <div class="front" style="background-image: url('taycan.avif');"></div>
+          <div class="back">
+            <h2>TAYCAN</h2>
+            <p style="font-family: Damion, cursive;  
+                font-style: normal;
+                font-size:larger;">Engine Type : 
+                    Electric Dual Motor All-Wheel Drive</p>
+                <ul>
+                    <li><strong>Acceleration 0 - 100 km/h:</strong> 2.4s</li>
+                    <li><strong>Top speed:</strong> 260 km/h</li>
+                    <li><strong>Sound level of stationary vehicle (rpm):</strong> 600-800 rpm </li>
+                </ul>
+            <ul>
+                <li><strong>Standard Features:</strong> Autopilot, Navigation, Heated Seats</li>
+                <li><strong>Optional Features:</strong> Full Self-Driving Capability, Premium Sound System</li>
+            </ul>
+            <button class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</button>
+          </div>
       </div>
-</td>
-<td>
-<div class="card card-image" style="background-image: url('cayenne\ f.png'); margin-top: 80px;">
-<div class="card-content">
-  <span class="card-title" style="font-family: Orbitron, sans-serif; font-weight: 400px; font-size: xx-large;"></span>
-  <div class="card-button"><a href="https://com/en-WW/model-start/Cayenne" class="button">Build your Cayenne</a>
-        <a href="https://com/en-WW/model-start/Cayenne" class="button">All Cayenne models</a></div>
-</div>
-</div>
-</td>
-  </table>
+  </div>
 
+  <div class="card-container">
+    <div class="card">
+        <div class="front" style="background-image: url('macan.jpg');"></div>
+        <div class="back">
+            <h2>MACAN</h2>
+            <p style="font-family: Damion, cursive;  
+                font-style: normal;
+                font-size:larger;">Engine Type : 
+                    Turbocharged inline-four and V6 engines</p>
+                <ul>
+                    <li><strong>Acceleration 0 - 100 km/h:</strong> 4.2s</li>
+                    <li><strong>Top speed:</strong> 250 km/h</li>
+                </ul>
+            <ul>
+                <li><strong>Standard Features:</strong> Autopilot, Navigation, Heated Seats</li>
+                <li><strong>Optional Features:</strong> Full Self-Driving Capability, Premium Sound System</li>
+            </ul>
+            <button class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</button>
+        </div>
+    </div>
+</div>
 
+<div class="card-container">
+  <div class="card">
+      <div class="front" style="background-image: url('cayenne.jpg');"></div>
+      <div class="back">
+        <h2>CAYENNE</h2>
+        <p style="font-family: Damion, cursive;  
+                font-style: normal;
+                font-size:larger;">Engine Type : 
+                    Turbocharged V6 and V8 engines</p>
+                <ul>
+                    <li><strong>Acceleration 0 - 100 km/h:</strong> 3.9s</li>
+                    <li><strong>Top speed:</strong> 245 km/h</li>
+                    <li><strong>Sound level of stationary vehicle (rpm):</strong> 600-800 rpm </li>
+                </ul>
+        <ul>
+            <li><strong>Standard Features:</strong> Autopilot, Navigation, Heated Seats</li>
+            <li><strong>Optional Features:</strong> Full Self-Driving Capability, Premium Sound System</li>
+        </ul>
+        <button class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</button>
+      </div>
+  </div>
+</div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('flipped');
+            });
+        });
+    </script>
 </body>
 </html>
