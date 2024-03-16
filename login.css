@@ -134,7 +134,7 @@ section .signin .content .form .inputBox i
 }
 input[type="submit"]:active
 {
-	background: transparent;
+	opacity: 0.6;
 }
 @media (max-width: 900px)
 {
