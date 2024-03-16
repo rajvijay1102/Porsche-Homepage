@@ -6,6 +6,30 @@
 	box-sizing: border-box;
 	font-family: 'Quicksand', sans-serif;
 }
+
+@media only screen and (max-width: 400px){
+  body {
+    visibility: visible;
+    width: 100rem;
+    height: 100rem;
+    margin-right: 10rem;
+		
+  }
+
+}
+
+
+@media only screen and (max-height: 50rem){
+  body {
+    visibility: visible;
+    width: 100rem;
+    height: 100rem;
+    margin-right: 10rem;
+		
+  }
+
+}
+
 body 
 {
 	display: flex;
