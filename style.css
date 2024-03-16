@@ -32,7 +32,7 @@ video {
   height: auto;
 
   
-  width: 100rem;
+  width: 95rem;
   object-fit: cover;
   pointer-events: none;
   z-index: -1;
