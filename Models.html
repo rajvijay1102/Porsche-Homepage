@@ -46,7 +46,7 @@
             height: 100%;
             position: relative;
             transform-style: preserve-3d;
-            transition: transform 0.5s;
+            transition: transform 0.5s ease;
             margin-top: 4rem;
         }
 
@@ -200,7 +200,7 @@
             text-align: center;
             color: black;
             font-family: "Orbitron", sans-serif;
-		font-size: 3em;
+            font-size: 3em;
         }
 
         h2 {
@@ -257,14 +257,14 @@
                   font-style: normal;">Standard Features : Autopilot, Navigation,  Seats</li>
                   
               </ul>
-              <button class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</button>
+              <a href="https://contact.porsche.com/uk/testdrive/"  class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</a>
             </div>
         </div>
     </div>
 
     <div class="card-container">
       <div class="card card2">
-          <div class="front" style="background-image: url('911.jpg');">
+          <div class="front" style="background-image: url('911a.jpg');">
             
         </div>
           <div class="back">
@@ -290,7 +290,7 @@
                 font-style: normal;">Standard Features : Autopilot, Navigation, Heated Seats</li>
                 
             </ul>
-            <button class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</button>
+            <a href="https://contact.porsche.com/uk/testdrive/"  class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</a>
           </div>
       </div>
   </div>
@@ -323,7 +323,7 @@
               font-style: normal;">Standard Features : Autopilot, Navigation, Heated Seats</li>
               
           </ul>
-          <button class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</button>
+          <a href="https://contact.porsche.com/uk/testdrive/"  class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</a>
         </div>
     </div>
 </div>
@@ -354,7 +354,7 @@
                 <li>Standard Features : Autopilot, Navigation, Heated Seats</li>
                 
             </ul>
-            <button class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</button>
+            <a href="https://contact.porsche.com/uk/testdrive/"  class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</a>
       </div>
   </div>
 </div>
@@ -384,7 +384,7 @@
             font-style: normal;">Standard Features : Autopilot, Navigation, Heated Seats</li>
             
         </ul>
-        <button class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</button>
+        <a href="https://contact.porsche.com/uk/testdrive/"  class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</a>
       </div>
   </div>
 </div>
@@ -415,26 +415,24 @@
             <li>Standard Features : Autopilot, Navigation, Heated Seats</li>
             
         </ul>
-        <button class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</button>
+        <a href="https://contact.porsche.com/uk/testdrive/"  class="cta" onclick="event.stopPropagation()" >Schedule a Test Drive</a>
       </div>
   </div>
 </div>
-
-
 <script>
-  const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.card');
 
-  cards.forEach(card => {
-      card.addEventListener('mouseenter', function() {
-          this.classList.toggle('flipped');
-      });
+    cards.forEach(card => {
+        // Add event listener for mouse enter to flip the card
+        card.addEventListener('mouseenter', function() {
+            this.classList.add('flipped');
+        });
 
-      // Add an additional event listener to flip back when mouse leaves the card
-      card.addEventListener('mouseleave', function() {
-          this.classList.toggle('flipped');
-      });
-  });
+        // Add event listener for mouse leave to flip the card back
+        card.addEventListener('mouseleave', function() {
+            this.classList.remove('flipped');
+        });
+    });
 </script>
-
 </body>
 </html>
