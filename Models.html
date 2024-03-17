@@ -9,27 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,350;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,350;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Models</title>
     <style>
+        @media only screen and (max-width: 768px) {
+            .card-container {
+                width: calc(100% - 2rem); /* Adjust margin */
+                margin: 0 auto; /* Center the card container */
+                margin-bottom: 2rem; /* Add bottom margin */
+            }
 
-@media only screen and (max-width: 40rem) {
-  .card-container {
-    visibility: visible;
-    width: 100rem;
-    height: 100rem;
-    margin-right: 8rem;
-  }
-
-  @media only screen and (max-height: 50rem){
-  body {
-    visibility: visible;
-    width: 100rem;
-    height: 100rem;
-    margin-right: 10rem;
-		
-  }
-
-}
-
-}
+            body {
+                max-width: 100%; /* Adjust max-width */
+                overflow-x: hidden; /* Hide horizontal overflow */
+            }
+        }
 
         .card-container {
             width: 35rem;
